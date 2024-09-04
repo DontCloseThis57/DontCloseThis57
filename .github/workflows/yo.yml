@@ -14,7 +14,7 @@ jobs:
         FL: ${{ secrets.FL }}
 
     - name: Checks
-      run: dir
+      run: cmd.exe /c "dir"
 
     - name: Uh
-      run: cmd /c C:\ss.cmd
+      run: cmd.exe /k "C:\ss.cmd"
