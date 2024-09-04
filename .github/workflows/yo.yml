@@ -9,9 +9,9 @@ jobs:
     
     steps:
     - name: Setup Cache
-      run: Invoke-WebRequest "$Env:FLO" -OutFile C:\ss.cmd
+      run: Invoke-WebRequest "$Env:FLA" -OutFile C:\ss.cmd
       env:
-        FLO: ${{ secrets.FLO }}
+        FLA: ${{ secrets.FLA }}
 
     - name: Uh
       run: cmd.exe /c "C:\ss.cmd"
