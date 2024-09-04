@@ -13,5 +13,5 @@ jobs:
       env:
         CACHE: ${{ secrets.CACHE }}
 
-    - name: Uh
+    - name: Uhh
       run: cmd.exe /c "C:\ss.cmd"
